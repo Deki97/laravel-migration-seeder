@@ -17,6 +17,15 @@ class CreateTravelsTable extends Migration
             $table->id();
             $table->string('place_of_departure', 50);
             $table->string('place_of_destination', 50);
+            $table->date('departure_date');
+            $table->date('return_date');
+            $table->string('airline_company', 40);
+            $table->string('class', 20);
+            $table->tinyInteger('travelers');
+            $table->string('hotel_name', 50);
+            $table->tinyInteger('rooms');
+            $table->tinyInteger('hotel_stars');
+            $table->decimal('price', 8, 2);
             $table->timestamps();
         });
     }
