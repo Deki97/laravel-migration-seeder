@@ -21,11 +21,11 @@ class CreateTravelsTable extends Migration
             $table->date('return_date');
             $table->string('airline_company', 40);
             $table->string('class', 20);
-            $table->tinyInteger('travelers');
+            $table->tinyInteger('travelers')->unsigned();
             $table->string('hotel_name', 50);
-            $table->tinyInteger('rooms');
-            $table->tinyInteger('hotel_stars');
-            $table->decimal('price', 8, 2);
+            $table->tinyInteger('rooms')->unsigned();
+            $table->tinyInteger('hotel_stars')->unsigned();
+            $table->decimal('price', 8, 2)->unsigned();
             $table->timestamps();
         });
     }
